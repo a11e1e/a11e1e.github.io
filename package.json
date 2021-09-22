@@ -1,0 +1,18 @@
+{
+  "name": "allele-blog",
+  "version": "1.0.0",
+  "description": "刘理铖的博客",
+  "main": "index.js",
+  "repository": "git@github.com:a11e1e/Blog.git",
+  "author": "allele <allele@zju.edu.cn>",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^0.19.1"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  }
+
+}
