@@ -1,25 +1,25 @@
-#!/usr/bin/env sh
+#!/bin/bash
+directory=docs/.vitepress/dist
+branch=gh-pages
+build_command() {
+  yarn docs:build
+}
 
-# abort on errors
-set -e
+echo -e "\033[0;32mDeleting old content...\033[0m"
+rm -rf $directory
 
-# build
-npm run docs:build
+echo -e "\033[0;32mChecking out $branch....\033[0m"
+git worktree add $directory $branch
 
-# navigate into the build output directory
-cd docs/.vitepress/dist
+echo -e "\033[0;32mGenerating site...\033[0m"
+build_command
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+echo -e "\033[0;32mDeploying $branch branch...\033[0m"
+cd $directory && 
+echo 'www.allele.dev' >> CNAME
+git add --all &&
+git commit -m "Deploy updates" &&
+git push origin $branch
 
-git init
-git add -A
-git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:a11e1e/a11e1e.github.io.git master
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-
-cd -
+echo -e "\033[0;32mCleaning up...\033[0m"
+git worktree remove $directory
