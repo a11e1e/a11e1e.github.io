@@ -11,7 +11,6 @@
 <script setup lang="ts">
 import { useData, withBase } from "vitepress";
 const blogs = useData().theme.value.blogs;
-const router = useRouter();
 </script>
 <style scoped>
 .blog {
