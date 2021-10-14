@@ -1,0 +1,1 @@
+import{_ as a,r as e,c as t,a as s,o as r}from"./app.efece37f.js";const o='{"title":"","description":"","frontmatter":{"sidebar":false},"relativePath":"blogs/index.md","lastUpdated":1634204208258}';var n=a({},[["render",function(a,o,n,d,i,l){const f=e("blogs");return r(),t("div",null,[s(f)])}]]);export{o as __pageData,n as default};
