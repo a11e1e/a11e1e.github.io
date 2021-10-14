@@ -15,6 +15,7 @@
   "scripts": {
     "docs:dev": "vitepress dev docs --port 3001",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "deploy": "sh deploy.sh"
   }
 }
