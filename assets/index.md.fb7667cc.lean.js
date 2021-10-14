@@ -1,0 +1,1 @@
+import{_ as e,r as t,c as a,a as r,o}from"./app.efece37f.js";const n='{"title":"Home","description":"","frontmatter":{"home":true,"heroText":"刘理铖","tagline":"Liú Lǐ Chéng"},"relativePath":"index.md","lastUpdated":1634203661038}';var s=e({},[["render",function(e,n,s,i,d,l){const m=t("home-page");return o(),a("div",null,[r(m)])}]]);export{n as __pageData,s as default};
