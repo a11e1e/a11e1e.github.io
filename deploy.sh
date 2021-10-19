@@ -1,25 +1,26 @@
 #!/bin/bash
+set -e
 directory=docs/.vitepress/dist
 branch=gh-pages
 build_command() {
   yarn docs:build
 }
 
-echo -e "\033[0;32mDeleting old content...\033[0m"
+echo "\033[0;32m删除旧的文章...\033[0m"
 rm -rf $directory
 
-echo -e "\033[0;32mChecking out $branch....\033[0m"
+echo "\033[0;32m新建分支 $branch...\033[0m"
 git worktree add $directory $branch
 
-echo -e "\033[0;32mGenerating site...\033[0m"
+echo "\033[0;32m生成新的文章...\033[0m"
 build_command
 
-echo -e "\033[0;32mDeploying $branch branch...\033[0m"
+echo "\033[0;32m部署到 $branch 分支...\033[0m"
 cd $directory && 
 echo 'www.allele.dev' >> CNAME
 git add --all &&
 git commit -m "Deploy updates" &&
 git push origin $branch
 
-echo -e "\033[0;32mCleaning up...\033[0m"
+echo "\033[0;32m清理...\033[0m"
 git worktree remove $directory
