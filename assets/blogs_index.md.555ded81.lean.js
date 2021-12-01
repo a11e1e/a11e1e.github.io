@@ -1,0 +1,1 @@
+import{_ as a,r as t,c as s,a as e,o as r}from"./app.85190ff3.js";const o='{"title":"","description":"","frontmatter":{"sidebar":false},"relativePath":"blogs/index.md","lastUpdated":1634635982424}';var n=a({},[["render",function(a,o,n,d,i,l){const f=t("blogs");return r(),s("div",null,[e(f)])}]]);export{o as __pageData,n as default};

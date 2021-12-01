@@ -1,1 +1,0 @@
-import{_ as a,r as t,c as s,a as e,o as r}from"./app.cdf062b3.js";const o='{"title":"","description":"","frontmatter":{"sidebar":false},"relativePath":"blogs/index.md","lastUpdated":1634635982424}';var d=a({},[["render",function(a,o,d,n,i,l){const c=t("blogs");return r(),s("div",null,[e(c)])}]]);export{o as __pageData,d as default};
