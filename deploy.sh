@@ -17,7 +17,6 @@ build_command
 
 echo "\033[0;32m部署到 $branch 分支...\033[0m"
 cd $directory && 
-echo 'www.allele.dev' >> CNAME
 git add --all &&
 git commit -m "Deploy updates" &&
 git push origin $branch
